@@ -1,0 +1,41 @@
+#!/usr/local/bin/lua
+--[[triangle.lua
+version 1.0
+Program buduje trójkąt prostokątny, w którym przyprostokątne są równe
+Rozmiar przyprostokątnych pobierany jest od użytkownika
+Technicznie jest to wypełnienie znakiem tablicy dwuwymiarowej
+W każdej iteracji maksymalna wartość kolumny jest równa wartości przetwarzanego wiersza
+]]--
+
+--Request o wprowadzenie rozmiaryu przyprostokątnych
+io.write ("Podaj rozmiar przyprostokątnych")
+max_wiersz=io.read()
+
+--Inicjalizacja tablicy tab_triangle
+tab_triangle={}
+for wiersz=1,max_wiersz do
+    tab_triangle[wiersz]={}
+    end
+
+--Budowa trójkąta prostokątnego, w którym rozmiar przyprostokątnycyh jest równy max_wiersz
+--W każdej iteracji maksymalna wartość kolumny jest równa wartości przetwarzanego wiersza
+for wiersz=1,max_wiersz do
+    max_kolumna=wiersz
+    
+    for kolumna=1,max_kolumna do
+        tab_triangle[wiersz][kolumna]='o'
+        end
+
+end
+
+--Odczyt wprowadzonych elementów tablicy
+for wiersz=1,max_wiersz do
+    max_kolumna=wiersz
+    
+    for kolumna=1,max_kolumna do
+        io.write(tab_triangle[wiersz][kolumna])
+        end
+    io.write("\n")
+    
+    end
+
