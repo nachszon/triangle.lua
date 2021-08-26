@@ -1,0 +1,46 @@
+--lua 5.3
+
+function func_build_tab(rozmiar)
+--inicjalizacja tablicy
+tab_tri={}
+max_wiersz=rozmiar
+
+for wiersz=1,max_wiersz do
+    tab_tri[wiersz]={}
+    end
+    
+    --budowanie trojkata
+    for wiersz=1,max_wiersz do
+        max_kolumna=wiersz
+        for kolumna=1,max_kolumna do
+            tab_tri[wiersz][kolumna]='x'
+            end
+        end
+    
+    --end konczace funkcje build_tab()
+    end
+
+
+
+
+function func_show_triangle()
+    print ("Podaj rozmiar trojkata")
+    rozmiar=io.read()
+    
+    --zbudowanie trojkata
+    func_build_tab(rozmiar)
+
+    
+    for wiersz=1,max_wiersz do
+        max_kolumna=wiersz
+        for kolumna=1,max_kolumna do
+            io.write(tab_tri[wiersz][kolumna])
+            end
+        io.write ("\n")
+        end
+    
+    --end konczace funkcje func_show_triangle()
+    end
+
+func_show_triangle()
+
